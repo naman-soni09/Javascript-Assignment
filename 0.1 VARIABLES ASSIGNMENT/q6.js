@@ -19,11 +19,3 @@ console.log("e =", e, "Type:", typeof e);
 console.log("f =", f, "Type:", typeof f);
 console.log("g =", g, "Type:", typeof g);
 console.log("h =", h, "Type:", typeof h);
-
-/*
-The typeof operator gives "object" for e,
-which contains null.
-
-The typeof operator gives "function" for h,
-which contains a function.
-*/
