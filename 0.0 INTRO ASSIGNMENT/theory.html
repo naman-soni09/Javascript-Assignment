@@ -1,0 +1,190 @@
+# JavaScript Introduction – Theory Answers
+
+## Section A: Short Answer Questions
+
+### Q1. What does it mean when we say JavaScript is a high-level programming language?
+
+JavaScript is called a **high-level programming language** because it is easy for humans to read and write. Programmers do not need to manage low-level computer operations such as memory allocation or CPU instructions directly. JavaScript provides simple syntax and built-in features that make programming easier.
+
+### Q2. Is JavaScript a compiled language or an interpreted language?
+
+JavaScript is commonly described as an **interpreted language**, but modern JavaScript engines use **Just-In-Time (JIT) compilation**. The engine analyzes and executes JavaScript code and may compile parts of the code into machine code during execution to improve performance.
+
+### Q3. Name the JavaScript engines used by the following browsers.
+
+* **Google Chrome:** V8
+* **Mozilla Firefox:** SpiderMonkey
+* **Apple Safari:** JavaScriptCore (also called Nitro)
+
+### Q4. What is Dynamic Typing in JavaScript?
+
+**Dynamic typing** means that a variable in JavaScript does not have to be declared with a fixed data type. The type can change while the program is running.
+
+Example:
+
+```javascript
+let value = 25;
+value = "JavaScript";
+value = false;
+```
+
+Here, the same variable contains a number, then a string, and finally a Boolean value.
+
+### Q5. Explain ECMAScript. What is its relation with JavaScript?
+
+**ECMAScript** is a standard or specification that defines how JavaScript should work. JavaScript is an implementation of the ECMAScript standard.
+
+ECMAScript provides rules and features for the JavaScript language. New versions of ECMAScript introduce features that JavaScript engines can implement.
+
+---
+
+# Section B: Conceptual Questions
+
+### Q6. Differentiate between a static website and a dynamic website.
+
+A **static website** displays mostly fixed content. The content generally remains the same unless the developer manually changes the HTML files.
+
+**Example:** A simple portfolio website containing fixed information.
+
+A **dynamic website** can change its content based on user actions, data, or server responses.
+
+**Example:** YouTube, where videos and recommendations can change according to the user and available data.
+
+### Q7. Explain any two features of JavaScript that make it suitable for creating interactive web pages.
+
+**1. Event Handling:**
+JavaScript can respond to user actions such as clicks, typing, mouse movements, and form submissions.
+
+**2. DOM Manipulation:**
+JavaScript can change HTML elements and CSS styles after a webpage has loaded. For example, it can change text, colors, images, or hide and show elements.
+
+### Q8. List four areas apart from web browsers where JavaScript is used.
+
+| Area                  | Example Technology |
+| --------------------- | ------------------ |
+| Backend development   | Node.js            |
+| Mobile applications   | React Native       |
+| Desktop applications  | Electron           |
+| Machine Learning / AI | TensorFlow.js      |
+
+JavaScript has become a multipurpose language because it can run in different environments.
+
+### Q9. Difference between internal and external JavaScript
+
+**JavaScript inside an HTML file:**
+
+JavaScript can be written directly inside the `<script>` tag in an HTML file.
+
+html
+<script>
+    console.log("Hello JavaScript");
+</script>
+```
+
+**JavaScript in an external `.js` file:**
+
+JavaScript can be written in a separate file such as `script.js` and connected to HTML.
+
+```html
+<script src="script.js"></script>
+```
+
+**Advantages of external JavaScript:**
+
+1. The code is easier to organize and maintain.
+2. The same JavaScript file can be used on multiple HTML pages.
+
+---
+
+# Section C: Code-Based Questions
+
+### Q10. Predict the output and explain why.
+
+```javascript
+let value = 25;
+console.log(typeof value);
+
+value = "JavaScript";
+console.log(typeof value);
+
+value = false;
+console.log(typeof value);
+```
+
+**Output:**
+
+```text
+number
+string
+boolean
+```
+
+**Explanation:**
+JavaScript is dynamically typed. The variable `value` first contains a number, then a string, and finally a Boolean value. The `typeof` operator returns the current data type of the value.
+
+### Q11. Alert box when a button is clicked
+
+The `onclick` event can be used to execute a JavaScript function when a button is clicked.
+
+```html
+<button onclick="showWelcomeMessage()">Click Me</button>
+
+<script>
+function showWelcomeMessage() {
+    alert("Welcome to JavaScript!");
+}
+</script>
+```
+
+When the user clicks the button, the `showWelcomeMessage()` function runs and displays an alert box.
+
+### Q12. Event-driven programming
+
+Event-driven programming means that the program responds to events such as button clicks, keyboard input, or mouse actions.
+
+```javascript
+document.getElementById("myBtn").addEventListener("click", function() {
+    document.getElementById("demo").textContent = "Button was clicked!";
+});
+```
+
+Here, the `"click"` event is detected using `addEventListener()`. When the button is clicked, the paragraph text is changed.
+
+---
+
+# Section D: Practical / Application Based
+
+### Q13. My First JavaScript Page
+
+The webpage contains a heading and a button. JavaScript is used to respond to the button click.
+
+When the button is clicked:
+
+1. An alert displays `"Hello, B.Tech Student!"`.
+2. The background color changes to light blue.
+3. A message is printed in the browser console.
+
+```javascript
+console.log("JavaScript is running successfully!");
+
+document.getElementById("clickBtn").addEventListener("click", function() {
+    alert("Hello, B.Tech Student!");
+    document.body.style.backgroundColor = "lightblue";
+});
+```
+
+The `console.log()` function prints information in the browser's developer console. The `addEventListener()` method listens for the button click and executes the specified function.
+
+---
+
+# Section E: Higher Order Thinking
+
+### Q14. Why did JavaScript become popular and multipurpose?
+
+JavaScript became popular because it is easy to use and is supported by all major modern web browsers. It allows developers to create interactive and dynamic web pages.
+
+The introduction of **Node.js** allowed JavaScript to run outside the browser. This made it possible to use JavaScript for backend development, servers, APIs, and other applications.
+
+**ECMAScript** provides the standard specification for JavaScript. Regular ECMAScript updates have introduced new features, syntax, and improvements to the language. These developments helped JavaScript become more powerful and useful.
+
+Today, JavaScript is used in frontend development, backend development, mobile applications, desktop applications, and other areas.
